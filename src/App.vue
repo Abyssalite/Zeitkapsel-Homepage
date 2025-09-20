@@ -12,12 +12,11 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/page1">Page1</RouterLink>
         <RouterLink to="/page2">Page2</RouterLink>
         <RouterLink to="/page3">Page3</RouterLink>
-
       </nav>
     </div>
   </header>
 
-  <RouterView class="router"/>
+  <RouterView class="router" />
 </template>
 
 <style scoped>
@@ -49,7 +48,6 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
 
 @media (min-width: 1024px) {
   header {

@@ -2,7 +2,7 @@
 <template>
   <div class="background">
     <div class="shape circle" v-for="n in 20" :key="n" :style="getShapeStyle()"></div>
-  </div>  
+  </div>
   <div class="counter">
     <p>Count: {{ counter.count }}</p>
     <p>Double: {{ counter.doubleCount }}</p>
@@ -16,10 +16,10 @@ import { useCounterStore } from '../stores/counter'
 const counter = useCounterStore()
 
 const getShapeStyle = () => {
-  const size = Math.random() * 10 + 10; // Random size between 20-70px
-  const left = Math.random() * 100; // Random x position
-  const top = Math.random() * 100; // Random y position
-  const duration = Math.random() * 20 + 10; // Random animation duration
+  const size = Math.random() * 10 + 10 // Random size between 20-70px
+  const left = Math.random() * 100 // Random x position
+  const top = Math.random() * 100 // Random y position
+  const duration = Math.random() * 20 + 10 // Random animation duration
   return {
     width: `${size}px`,
     height: `${size}px`,
@@ -27,8 +27,8 @@ const getShapeStyle = () => {
     top: `${top}%`,
     animationDuration: `${duration}s`,
     animationDelay: `${Math.random() * 5}s`,
-  };
-};
+  }
+}
 </script>
 
 <style scoped>
