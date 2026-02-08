@@ -1,22 +1,28 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import keycloak from './keycloak';
+
+function logout() {
+  keycloak.logout({ redirectUri: window.location.origin + import.meta.env.VITE_BASE_URL});
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/page1">Page1</RouterLink>
-        <RouterLink to="/page2">Page2</RouterLink>
-        <RouterLink to="/page3">Page3</RouterLink>
-      </nav>
-    </div>
-  </header>
+    <header>
+      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/page1">Page1</RouterLink>
+          <RouterLink to="/page2">Page2</RouterLink>
+          <RouterLink to="/page3">Page3</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <button class="logout" @click="logout">Logout</button>
 
   <RouterView class="router" />
+
 </template>
 
 <style scoped>
@@ -29,6 +35,17 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+}
+
+.top-div {
+  display: flex;
+}
+
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
 }
 
 nav a.router-link-exact-active {

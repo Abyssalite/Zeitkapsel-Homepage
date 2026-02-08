@@ -1,7 +1,7 @@
 <!-- components/FloatingBackground.vue -->
 <template>
   <div class="background">
-    <div class="shape circle" v-for="n in 20" :key="n" :style="getShapeStyle()"></div>
+    <div class="shape circle" v-for="n in counter.doubleCount " :key="n" :style="getShapeStyle()"></div>
   </div>
   <div class="counter">
     <p>Count: {{ counter.count }}</p>
