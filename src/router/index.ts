@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import StaticView from '../views/StaticView.vue'
-import keycloak from "../keycloak";
 import { app } from "../main";
+import { useAuthenticateStore } from '../stores/authenticate'
+import { ref } from 'vue';
 
+const isInit = ref(false)
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
@@ -17,22 +19,20 @@ const router = createRouter({
       path: '/static',
       name: 'Static',
       component: StaticView,
-      beforeEnter: (to, from, next) => {
-        keycloak.init({ 
-          onLoad: 'login-required',
-          pkceMethod: "S256",
-        }).then((authenticated) => {
-          if (authenticated) {
-            console.log('User is authenticated');
-            app.config.globalProperties.$keycloak = keycloak;
-            next()
-          } else {
-            console.log('User is not authenticated');
-            keycloak.login();
-          }
-        }).catch((error) => {
-          console.error('Keycloak initialization failed:', error);
-        });
+      beforeEnter: async (to, from, next) => {
+        const auth = useAuthenticateStore()
+        if (!isInit.value) {
+          isInit.value = true
+          console.log('Keycloak Initialized: ', await auth.initKeycloak());
+        }
+
+        if (auth.isAuth) {
+          app.config.globalProperties.$keycloak = auth.keycloak;
+          next()
+        } else {
+          console.log('User is not authenticated');
+          auth.login();
+        }
       }
     }
   ],

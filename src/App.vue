@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRouter } from 'vue-router'
-import keycloak from './keycloak';
-const router = useRouter();
+import { useAuthenticateStore } from './stores/authenticate'
 
-function logout() {
-  keycloak.logout({ redirectUri: window.location.origin + import.meta.env.VITE_BASE_URL});
-}
+const router = useRouter();
+const auth = useAuthenticateStore();
 
 function back() {
   router.replace({ path: '/' })
@@ -22,7 +20,7 @@ function back() {
         </nav>
         <span class="control-box">
           <button @click="back">Back</button>
-          <button @click="logout">Logout</button>
+          <button @click="auth.logout">Logout</button>
         </span>
       </div>
     </header>

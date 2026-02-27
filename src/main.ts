@@ -4,10 +4,9 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
+export const app = createApp(App);
 import router from './router'
 
-
-export const app = createApp(App);
 app.use(createPinia())
 app.use(router)
 app.mount("#app");    
