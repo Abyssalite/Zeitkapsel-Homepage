@@ -17,8 +17,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@lucien144/vue3-parallaxy": "^0.1.2",
-    "gsap": "^3.13.0",
     "keycloak-js": "^26.2.0",
     "pinia": "^3.0.3",
     "vue": "^3.5.18",

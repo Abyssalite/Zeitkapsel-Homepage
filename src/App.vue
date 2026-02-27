@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
 import keycloak from './keycloak';
+const router = useRouter();
 
 function logout() {
   keycloak.logout({ redirectUri: window.location.origin + import.meta.env.VITE_BASE_URL});
+}
+
+function back() {
+  router.replace({ path: '/' })
 }
 </script>
 
@@ -13,19 +18,38 @@ function logout() {
       <div class="wrapper">
         <nav>
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/page1">Page1</RouterLink>
-          <RouterLink to="/page2">Page2</RouterLink>
-          <RouterLink to="/page3">Page3</RouterLink>
+          <RouterLink to="/static">Static</RouterLink>
         </nav>
+        <span class="control-box">
+          <button @click="back">Back</button>
+          <button @click="logout">Logout</button>
+        </span>
       </div>
     </header>
-    <button class="logout" @click="logout">Logout</button>
 
   <RouterView class="router" />
 
 </template>
 
 <style scoped>
+.control-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+}
+
+.control-box button {
+  margin: 6px;
+  background: none;
+  border: none;
+  color: var(--color-text);
+}
+
+.control-box button:hover {
+  color: hsla(160, 100%, 37%, 1);
+}
+
 .logo {
   display: block;
   margin: 0 auto 2rem;

@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import StaticView from '../views/StaticView.vue'
+import keycloak from "../keycloak";
+import { app } from "../main";
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
@@ -10,20 +14,27 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/page1',
-      name: 'page1',
-      component: () => import('../views/Page1View.vue'),
-    },
-    {
-      path: '/page2',
-      name: 'page2',
-      component: () => import('../views/Page2View.vue'),
-    },
-    {
-      path: '/page3',
-      name: 'page3',
-      component: () => import('../views/Page3View.vue'),
-    },
+      path: '/static',
+      name: 'Static',
+      component: StaticView,
+      beforeEnter: (to, from, next) => {
+        keycloak.init({ 
+          onLoad: 'login-required',
+          pkceMethod: "S256",
+        }).then((authenticated) => {
+          if (authenticated) {
+            console.log('User is authenticated');
+            app.config.globalProperties.$keycloak = keycloak;
+            next()
+          } else {
+            console.log('User is not authenticated');
+            keycloak.login();
+          }
+        }).catch((error) => {
+          console.error('Keycloak initialization failed:', error);
+        });
+      }
+    }
   ],
 })
 
