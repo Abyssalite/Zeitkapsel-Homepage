@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import StaticView from '../views/StaticView.vue'
-import { app } from "../main";
-import { useAuthenticateStore } from '../stores/authenticate'
+import { app, auth } from "../main";
 import { ref } from 'vue';
 
 const isInit = ref(false)
@@ -20,7 +19,6 @@ const router = createRouter({
       name: 'Static',
       component: StaticView,
       beforeEnter: async (to, from, next) => {
-        const auth = useAuthenticateStore()
         if (!isInit.value) {
           isInit.value = true
           console.log('Keycloak Initialized: ', await auth.initKeycloak());
