@@ -7,50 +7,63 @@
     </div>
 
     <div class="select-box">
-      <a id="elabftw" href="https://zeitkapsel.iosse.de/elab" rel="nofollow">
+      <a id="elabftw" href="https://zeitkapsel.iosse.de/elab" 
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
         <div class="link-wrapper">
           <h2>eLabFTW</h2>
           <img src="../assets/elabftw-logo-only.svg" alt="elabftw">
         </div>
       </a>
 
-      <a id="gitea" href="https://zeitkapsel.iosse.de/git" rel="nofollow">
+      <a id="gitea" href="https://zeitkapsel.iosse.de/git"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
         <div class="link-wrapper">
           <h2>Gitea</h2> 
           <img src="../assets/gitea-logo.svg" alt="gitea">
-
         </div>
       </a>
 
-      <a id="jupyter" href="https://zeitkapsel.iosse.de/jupyter" rel="nofollow">
+      <a id="jupyter" href="https://zeitkapsel.iosse.de/jupyter"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
         <div class="link-wrapper">
           <h2>JupyterLab</h2> 
           <img src="../assets/jupyter-logo.svg" alt="jupyter">
-
         </div>
       </a>
 
-      <a id="element" href="https://app.element.io/#/login" rel="nofollow">
+      <a id="element" href="https://app.element.io/#/login"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
         <div class="link-wrapper">
           <h2>Element</h2> 
           <img src="../assets/element.png" alt="element">
-
         </div>
       </a>
 
-      <a id="keycloak" href="https://zeitkapsel.iosse.de/auth" rel="nofollow">
+      <a id="keycloak" href="https://zeitkapsel.iosse.de/auth"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
         <div class="link-wrapper">
           <h2>Keycloak</h2> 
           <img src="../assets/Keycloak_Logo.png" alt="keycloak">
-
         </div>
       </a>
 
-      <a id="cockpit" href="https://zeitkapsel.iosse.de/dev" rel="nofollow">
+      <a id="cockpit" href="https://zeitkapsel.iosse.de/dev"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
         <div class="link-wrapper">
           <h2>Cockpit</h2> 
           <img src="../assets/cockpit.png" alt="cockpit">
-
         </div>
       </a>
     </div>
