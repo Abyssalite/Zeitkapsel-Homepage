@@ -5,12 +5,10 @@ import keycloak from "../keycloak";
 export const useAuthenticateStore = defineStore('auth', () => {
   const isAuth = ref(false)
 
-  function initKeycloak() {
-    const authenticated = keycloak.init({
-      onLoad: 'check-sso',
-      pkceMethod: 'S256',
-      silentCheckSsoRedirectUri:
-        window.location.origin + '/silent-check-sso.html',
+  async function initKeycloak() {
+    const authenticated = await keycloak.init({
+      onLoad: 'login-required',
+      pkceMethod: "S256",
     })
     return authenticated
   }

@@ -21,7 +21,8 @@ const router = createRouter({
       beforeEnter: async (to, from, next) => {
         if (!isInit.value) {
           isInit.value = true
-          console.log('Keycloak Initialized: ', await auth.initKeycloak());
+          auth.isAuth = await auth.initKeycloak()
+          console.log('Keycloak Initialized: ', auth.isAuth);
         }
 
         if (auth.isAuth) {
