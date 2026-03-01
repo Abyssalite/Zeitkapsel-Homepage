@@ -12,7 +12,7 @@ function back() {
 
 <template>
     <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      <img alt="Zeitkapsel logo" class="logo" src="@/assets/logo.svg" width="300px" height="125px" />
       <div class="wrapper">
         <nav>
           <RouterLink to="/">Home</RouterLink>
@@ -32,12 +32,14 @@ function back() {
 <style scoped>
 .control-box {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   height: 30px;
 }
 
 .control-box button {
+  font-size: 16px;
+  font-weight: bold;
   margin: 6px;
   background: none;
   border: none;
@@ -45,10 +47,11 @@ function back() {
 }
 
 .control-box button:hover {
-  color: hsla(160, 100%, 37%, 1);
+  color: #00bd7e;
 }
 
 .logo {
+  color: chartreuse;
   display: block;
   margin: 0 auto 2rem;
 }
@@ -88,7 +91,7 @@ nav a:first-of-type {
   border: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 100px) {
   header {
     display: flex;
     place-items: center;
@@ -112,6 +115,12 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo {
+    width: 200px;
   }
 }
 </style>
