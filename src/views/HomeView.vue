@@ -6,7 +6,8 @@
 <template>
   <div class="page">
       <div class="docs-wrapper">    
-        <zero-md src="src/components/docs/zeitkapsel.md"></zero-md>
+        <zero-md v-if="docsUrl" :src="docsUrl"></zero-md>
+        <zero-md v-else src="src/components/docs/zeitkapsel.md"></zero-md>
       </div>
   </div>
 </template>
