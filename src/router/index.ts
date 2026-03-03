@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import StaticView from '../views/StaticView.vue'
+import ServiceView from '../views/ServiceView.vue'
 import { app, auth } from "../main";
 
 const router = createRouter({
@@ -12,24 +13,28 @@ const router = createRouter({
       component: HomeView,
     },
     {
+      path: '/service',
+      name: 'Service',
+      component: ServiceView,
+    },
+    {
       path: '/static',
       name: 'Static',
       component: StaticView,
       beforeEnter: async (to, from, next) => {
         if (import.meta.env.VITE_REQUIRE_AUTHENTICATE == "true") {
-          console.log('User authenticated: ', await auth.initKeycloak());
+          console.log('Keycloak init: ', await auth.initKeycloak());
 
           if (!auth.isAuth) {
             console.log('User is not authenticated');
             await auth.login();
-            if (await auth.initKeycloak() && auth.keycloak.token) auth.isAuth = true
+            auth.isAuth =  auth.keycloak.authenticated ?? false
           } 
           if (auth.isAuth){
             app.config.globalProperties.$keycloak = auth.keycloak;
             next()
-            return
           }
-          return await auth.logout()
+          return
         } else next()
       }
     }

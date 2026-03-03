@@ -6,20 +6,17 @@ export const useAuthenticateStore = defineStore('auth', () => {
   const isAuth = ref(false)
   const isInit = ref(false)
 
-  async function initKeycloak() {    
-    if (isInit.value) return isInit.value && keycloak.authenticated
+  async function initKeycloak() {
+    console.log( isInit.value,isAuth.value )
+    if (isInit.value) return isInit.value
 
     isInit.value = true
-    await keycloak.init({
-      onLoad: 'check-sso',
+    isAuth.value = await keycloak.init({
+      onLoad: 'login-required',
       pkceMethod: 'S256',
-      silentCheckSsoRedirectUri:
-        window.location.origin + '/silent-check-sso.html',
     })
-
-    return isInit.value && keycloak.authenticated
+    return isInit.value
   }
-
 
   async function login() {
     return keycloak.login({

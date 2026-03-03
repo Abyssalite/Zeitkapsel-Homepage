@@ -16,6 +16,7 @@ function back() {
       <div class="wrapper">
         <nav>
           <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/service">Service</RouterLink>
           <RouterLink to="/static">Static</RouterLink>
         </nav>
         <span class="control-box">

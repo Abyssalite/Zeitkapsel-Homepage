@@ -7,6 +7,8 @@ import router from './router'
 import { useAuthenticateStore } from './stores/authenticate'
 
 export const app = createApp(App)
+import ZeroMd from 'zero-md'
+customElements.define('zero-md', ZeroMd)
 
 app.use(createPinia())
 app.use(router)
