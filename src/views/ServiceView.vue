@@ -42,7 +42,7 @@
         rel="noopener noreferrer nofollow"
       >
         <div class="link-wrapper">
-          <h2>JupyterLab</h2> 
+          <h2>JenaFuseki</h2> 
           <img src="../assets/fuseki-jena.png" alt="fuseki">
         </div>
       </a>
