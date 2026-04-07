@@ -12,7 +12,7 @@ function back() {
 
 <template>
     <header>
-      <img alt="Zeitkapsel logo" class="logo" src="@/assets/logo.svg" width="300px" height="125px" />
+      <img alt="Zeitkapsel logo" class="logo" src="@/assets/logo.svg" />
       <div class="wrapper">
         <nav>
           <RouterLink to="/">Home</RouterLink>
@@ -31,82 +31,50 @@ function back() {
 </template>
 
 <style scoped>
-.control-box {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  height: 30px;
-}
-
-.control-box button {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 6px;
-  background: none;
-  border: none;
-  color: var(--color-text);
-}
-
-.control-box button:hover {
-  color: #00bd7e;
-}
-
-.logo {
-  color: chartreuse;
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.top-div {
-  display: flex;
-}
-
-.logout {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 30px;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 100px) {
   header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+  }
+
+  .control-box {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    height: 30px;
+  }
+
+  .control-box button {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 6px;
+    background: none;
+    border: none;
+    color: var(--color-text);
+  }
+
+  .control-box button:hover {
+    color: #00bd7e;
+  }
+
+  .logo {
+    width:300px;
+    height:125px;
+    transition: 0.5s;
+    margin: 0 2rem 0 0;
+  }
+
+  .logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 30px;
   }
 
   nav {
@@ -117,7 +85,24 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+
+  nav a.router-link-exact-active {
+    color: var(--color-text);
+  }
+
+  nav a.router-link-exact-active:hover {
+    background-color: transparent;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+  }
+
+  nav a:first-of-type {
+    border: 0;
+  }
 
 @media (max-width: 800px) {
   .logo {

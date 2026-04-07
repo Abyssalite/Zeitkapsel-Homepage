@@ -32,17 +32,23 @@
     right: 20px;
     
     z-index: 10;  
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
     border-radius: 50px;
     background: none;
+    transition: 0.5s;
+
     img {
+      transition: 0.5s;
       height: 80px;
     }
   }
 
   .login:hover {
     background-color: #F05A2833;
+    img {
+        transform: scale(105%);
+    }
   }
 
   .frame-wrapper{
@@ -59,12 +65,12 @@
   @media (max-width: 814px) {
     .login {
       top: -80px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50px;
-    img {
-      height: 60px;
-    }
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      img {
+        height: 60px;
+      }
     }
   }
 </style>

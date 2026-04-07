@@ -80,7 +80,7 @@
   overflow: hidden;
   z-index: -1;
   
-  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .select-box {
@@ -94,12 +94,27 @@
 
 .select-box a{
   margin: 20px;
-  height: 250px;
+  height: 260px;
   width: 300px;
+  border-radius: 20px;
+  background-color: #2222 !important;
+    transition: 0.5s;
 
 img {
+    margin-top: 5px;
     width: 200px;
     height: 200px;
+    transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 0.5s;
+  }
+}
+
+.select-box a:hover {
+  background-color: #5555 !important;
+  transform: scale(104%);
+
+  img {
+      transform: scale(110%);
   }
 }
 
