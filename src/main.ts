@@ -2,13 +2,15 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
 import App from './App.vue'
 import router from './router'
+import { useAuthenticateStore } from './stores/authenticate'
 
-const app = createApp(App)
+export const app = createApp(App)
+import ZeroMd from 'zero-md'
+customElements.define('zero-md', ZeroMd)
 
 app.use(createPinia())
 app.use(router)
-
-app.mount('#app')
+app.mount("#app");    
+export const auth = useAuthenticateStore()

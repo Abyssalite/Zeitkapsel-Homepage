@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <style>
+    text {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+  </style>
+  
+  <text text-anchor="middle" font-size="32" y="32" x="20">
+    <tspan fill="#34495e">Z</tspan><tspan fill="#41b883">k</tspan>
+  </text>
+</svg>
