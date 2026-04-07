@@ -32,15 +32,15 @@
     right: 20px;
     
     z-index: 10;  
-    width: 105px;
-    height: 105px;
+    width: 80px;
+    height: 80px;
     border-radius: 50px;
     background: none;
     transition: 0.5s;
 
     img {
       transition: 0.5s;
-      height: 80px;
+      height: 60px;
     }
   }
 

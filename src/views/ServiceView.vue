@@ -37,6 +37,16 @@
         </div>
       </a>
 
+      <a id="fuseki" href="https://zeitkapsel.iosse.de/fuseki"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <div class="link-wrapper">
+          <h2>JupyterLab</h2> 
+          <img src="../assets/fuseki-jena.png" alt="fuseki">
+        </div>
+      </a>
+
       <a id="element" href="https://app.element.io/#/login"
         target="_blank"
         rel="noopener noreferrer nofollow"
@@ -140,6 +150,10 @@ img {
 
 .page:has(#cockpit:hover) .background {
   background-color: #3465A433 !important;
+}
+
+.page:has(#fuseki:hover) .background {
+  background-color: #1980B833 !important;
 }
 
 .link-wrapper {
