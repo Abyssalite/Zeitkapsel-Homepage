@@ -36,10 +36,9 @@
     height: 80px;
     border-radius: 50px;
     background: none;
-    transition: 0.5s;
 
     img {
-      transition: 0.5s;
+      transition: 0.4s;
       height: 60px;
     }
   }
@@ -62,7 +61,8 @@
       display: block;
     }
   }
-  @media (max-width: 814px) {
+
+  /*@media (max-width: 814px) {
     .login {
       top: -80px;
       width: 80px;
@@ -72,5 +72,5 @@
         height: 60px;
       }
     }
-  }
+  }*/
 </style>

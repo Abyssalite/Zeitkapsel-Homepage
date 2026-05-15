@@ -47,16 +47,6 @@
         </div>
       </a>
 
-      <a id="element" href="https://app.element.io/#/login"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-      >
-        <div class="link-wrapper">
-          <h2>Element</h2> 
-          <img src="../assets/element.png" alt="element">
-        </div>
-      </a>
-
       <a id="keycloak" href="https://zeitkapsel.iosse.de/auth"
         target="_blank"
         rel="noopener noreferrer nofollow"
@@ -64,6 +54,16 @@
         <div class="link-wrapper">
           <h2>Keycloak</h2> 
           <img src="../assets/Keycloak_Logo.png" alt="keycloak">
+        </div>
+      </a>
+
+      <a id="element" href="https://app.element.io/#/login"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <div class="link-wrapper">
+          <h2>Element</h2> 
+          <img src="../assets/element.png" alt="element">
         </div>
       </a>
 
@@ -118,14 +118,14 @@
   width: 300px;
   border-radius: 20px;
   background-color: #2222 !important;
-    transition: 0.5s;
+    transition: 0.4s;
 
 img {
     margin-top: 5px;
     width: 200px;
     height: 200px;
     transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: 0.5s;
+    transition: 0.4s;
   }
 }
 
