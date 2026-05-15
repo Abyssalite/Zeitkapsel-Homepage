@@ -15,8 +15,8 @@ function back() {
       <img alt="Zeitkapsel logo" class="logo" src="@/assets/logo.svg" />
       <div class="wrapper">
         <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/service">Service</RouterLink>
+          <RouterLink to="/home">Home</RouterLink>
+          <RouterLink to="/">Service</RouterLink>
           <RouterLink to="/static">Static</RouterLink>
         </nav>
         <span class="control-box">

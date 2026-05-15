@@ -67,6 +67,16 @@
         </div>
       </a>
 
+      <a id="grafana" href="https://zeitkapsel.iosse.de/grafana/login"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <div class="link-wrapper">
+          <h2>Grafana</h2> 
+          <img src="../assets/grafana.png" alt="grafana">
+        </div>
+      </a>
+
       <a id="cockpit" href="https://zeitkapsel.iosse.de/dev"
         target="_blank"
         rel="noopener noreferrer nofollow"
@@ -154,6 +164,10 @@ img {
 
 .page:has(#fuseki:hover) .background {
   background-color: #1980B833 !important;
+}
+
+.page:has(#grafana:hover) .background {
+  background-color: #F05A2833 !important;
 }
 
 .link-wrapper {

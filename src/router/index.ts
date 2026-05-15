@@ -8,12 +8,12 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: HomeView,
     },
     {
-      path: '/service',
+      path: '/',
       name: 'Service',
       component: ServiceView,
     },
@@ -21,7 +21,7 @@ const router = createRouter({
       path: '/static',
       name: 'Static',
       component: StaticView,
-      beforeEnter: async (to, from, next) => {
+      beforeEnter: async (_, _, next) => {
         if (import.meta.env.VITE_REQUIRE_AUTHENTICATE == "true") {
           console.log('Keycloak init: ', await auth.initKeycloak());
 
