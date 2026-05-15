@@ -21,7 +21,7 @@ const gitdUrl = ref(import.meta.env.VITE_GIT_URL)
         <nav>
           <RouterLink to="/home">Home</RouterLink>
           <RouterLink to="/">Service</RouterLink>
-          <RouterLink to="/static">Static</RouterLink>
+          <RouterLink to="/stats">Stats</RouterLink>
         </nav>
         <div class="control-box">
           <a :href="gitdUrl" 
@@ -31,7 +31,7 @@ const gitdUrl = ref(import.meta.env.VITE_GIT_URL)
           >
             <svg width="70" height="70" viewBox="0 0 250 250">
               <path
-                fill="#DDD"
+                id="triangle"
                 d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" 
               />
               <g transform="translate(180 -20) scale(0.5) rotate(45)">
@@ -95,6 +95,10 @@ const gitdUrl = ref(import.meta.env.VITE_GIT_URL)
     g {
         transform: translate(180px, -40px) rotate(45deg) scale(0.6);
     }
+  }
+
+  #triangle {
+    fill: var(--trig-bg);
   }
 
   .logo {

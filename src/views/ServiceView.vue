@@ -175,5 +175,9 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h2 {
+    font-weight: bold;
+  }
 }
 </style>

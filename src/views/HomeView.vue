@@ -22,12 +22,13 @@
   .docs-wrapper {
     display: flex;
     width: 90%;
+    margin: 15px 0;
     border-radius: 20px;
-    filter: drop-shadow(10px 10px 4px rgb(15, 15, 15));
+    filter: drop-shadow(5px 5px 6px #555);
 
     justify-content: center;
     align-items: center;
-    background-color: #0d1117 !important;
+    background-color: var(--docs-bg);
     padding: 60px 10px;
 
     zero-md {

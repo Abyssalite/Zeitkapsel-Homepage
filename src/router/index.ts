@@ -18,8 +18,8 @@ const router = createRouter({
       component: ServiceView,
     },
     {
-      path: '/static',
-      name: 'Static',
+      path: '/stats',
+      name: 'Stats',
       component: StaticView,
       beforeEnter: async (_to, _from, next) => {
         if (import.meta.env.VITE_REQUIRE_AUTHENTICATE == "true") {

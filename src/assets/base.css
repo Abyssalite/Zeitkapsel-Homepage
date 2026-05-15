@@ -33,11 +33,16 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --section-gap: 160px;
+  --section-gap: 160px;  
+  --docs-bg: white;
+  --trig-bg: #00bd7e;
+
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --trig-bg: #EBEBEBA3;
+    --docs-bg: #0d1117;
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
