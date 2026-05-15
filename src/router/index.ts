@@ -21,7 +21,7 @@ const router = createRouter({
       path: '/static',
       name: 'Static',
       component: StaticView,
-      beforeEnter: async (_, _, next) => {
+      beforeEnter: async (_to, _from, next) => {
         if (import.meta.env.VITE_REQUIRE_AUTHENTICATE == "true") {
           console.log('Keycloak init: ', await auth.initKeycloak());
 
