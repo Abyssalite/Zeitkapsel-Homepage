@@ -9,11 +9,11 @@ export const useAuthenticateStore = defineStore('auth', () => {
   async function initKeycloak() {
     if (isInit.value) return isInit.value
 
+    isInit.value = true
     isAuth.value = await keycloak.init({
       onLoad: 'login-required',
       pkceMethod: 'S256',
     })
-    isInit.value = true
 
     return isInit.value
   }
