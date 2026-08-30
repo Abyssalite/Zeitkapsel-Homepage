@@ -26,11 +26,11 @@ const router = createRouter({
           console.log('Keycloak init: ', await auth.initKeycloak());
           console.log('Authenticated: ', auth.getIsAuth())
 
-          if (!auth.getIsAuth()) {
+          if (!auth.getIsAuth().value) {
             console.log('User is not authenticated');
             await auth.login();
           } 
-          if (auth.getIsAuth()){
+          if (auth.getIsAuth().value){
             app.config.globalProperties.$keycloak = auth.keycloak;
             next()
           }
