@@ -24,13 +24,13 @@ const router = createRouter({
       beforeEnter: async (_to, _from, next) => {
         if (import.meta.env.VITE_REQUIRE_AUTHENTICATE == "true") {
           console.log('Keycloak init: ', await auth.initKeycloak());
+          console.log('Authenticated: ', auth.getIsAuth())
 
-          if (!auth.isAuth) {
+          if (!auth.getIsAuth()) {
             console.log('User is not authenticated');
             await auth.login();
-            auth.isAuth =  auth.keycloak.authenticated ?? false
           } 
-          if (auth.isAuth){
+          if (auth.getIsAuth()){
             app.config.globalProperties.$keycloak = auth.keycloak;
             next()
           }
