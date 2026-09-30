@@ -7,7 +7,7 @@
     </div>
 
     <div class="select-box">
-      <a id="elabftw" href="https://zeitkapsel.iosse.de/elab" 
+      <a id="elabftw" href="https://zeitkapsel.iosse.de/elabftw" 
         target="_blank"
         rel="noopener noreferrer nofollow"
       >
@@ -84,6 +84,26 @@
         <div class="link-wrapper">
           <h2>Cockpit</h2> 
           <img src="../assets/cockpit.png" alt="cockpit">
+        </div>
+      </a>
+
+      <a id="professorenprofil" href="https://zeitkapsel.iosse.de/professorenprofil"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <div class="link-wrapper">
+          <h2>Professorenprofil</h2> 
+          <img src="../assets/IFI-icon1.svg" alt="cockpit">
+        </div>
+      </a>
+
+      <a id="abschlussarbeiten" href="https://zeitkapsel.iosse.de/abschlussarbeiten"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        <div class="link-wrapper">
+          <h2>Abschlussarbeiten</h2> 
+          <img src="../assets/IFI-icon2.svg" alt="cockpit">
         </div>
       </a>
     </div>
@@ -168,6 +188,14 @@ img {
 
 .page:has(#grafana:hover) .background {
   background-color: #F05A2833 !important;
+}
+
+.page:has(#professorenprofil:hover) .background {
+  background-color: #075b9d33 !important;
+}
+
+.page:has(#abschlussarbeiten:hover) .background {
+  background-color: #e45d3a33 !important;
 }
 
 .link-wrapper {
