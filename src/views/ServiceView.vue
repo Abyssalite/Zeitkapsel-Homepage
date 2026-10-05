@@ -93,7 +93,7 @@
       >
         <div class="link-wrapper">
           <h2>Professorenprofil</h2> 
-          <img src="../assets/IFI-icon1.svg" alt="cockpit">
+          <img src="../assets/logo-professor.png" alt="cockpit">
         </div>
       </a>
 
@@ -103,7 +103,7 @@
       >
         <div class="link-wrapper">
           <h2>Abschlussarbeiten</h2> 
-          <img src="../assets/IFI-icon2.svg" alt="cockpit">
+          <img src="../assets/logo-abschluss.png" alt="cockpit">
         </div>
       </a>
     </div>
